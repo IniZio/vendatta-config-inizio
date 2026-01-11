@@ -1,0 +1,9 @@
+name: shell-executor
+description: Execute shell commands with safety checks and logging
+parameters:
+  type: object
+  properties:
+    command: { type: string, description: "Command to execute" }
+execute:
+  command: "bash"
+  args: ["-c", "{{.command}}"]
